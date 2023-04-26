@@ -12,7 +12,7 @@ export default function Sidebar() {
     fetchCategories();
   }, []);
   return (
-    <div>
+    <div className="sidebar">
       {categories &&
         categories.map((item) => {
           return <div>{item}</div>;
