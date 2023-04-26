@@ -1,3 +1,4 @@
 import Header from './header';
 import Footer from './footer';
-export { Header, Footer };
+import Sidebar from './sidebar';
+export { Header, Footer, Sidebar };
