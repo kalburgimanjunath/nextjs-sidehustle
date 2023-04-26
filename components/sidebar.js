@@ -4,8 +4,9 @@ import Navbar from './navbar';
 export default function Sidebar() {
   const [categories, setCategories] = useState([]);
   const fetchCategories = async () => {
-    const response = await fetch('/api/categories');
-    setCategories(response.catgory);
+    await fetch('/api/categories')
+      .then((res) => res.json())
+      .then((result) => setCategories(result.category));
   };
   useEffect(() => {
     fetchCategories();
